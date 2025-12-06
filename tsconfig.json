@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      // 💡 These paths map the package name to the source code folder
+      "@repo/ui/*": ["packages/ui/src/*"],
+      "@repo/types": ["packages/types/src/index.ts"],
+      "@repo/api-client/*": ["packages/api-client/src/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  // Explicitly tell TypeScript to look inside the apps and packages directories
+  "include": ["apps/**/*.ts", "apps/**/*.tsx", "packages/**/*.ts", "packages/**/*.tsx"]
+}
